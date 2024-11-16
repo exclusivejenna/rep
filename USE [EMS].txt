@@ -1,0 +1,24 @@
+USE [EMS]
+GO
+
+/****** Object:  Table [dbo].[events]    Script Date: 11/16/2024 5:13:13 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[events](
+	[eventId] [int] IDENTITY(1,1) NOT NULL,
+	[eventTitle] [nvarchar](50) NULL,
+	[eventDescription] [nvarchar](50) NULL,
+	[startDate] [date] NULL,
+	[endDate] [date] NULL,
+	[avenue] [nchar](10) NULL,
+	[maxMembers] [int] NULL,
+ CONSTRAINT [PK_events] PRIMARY KEY CLUSTERED 
+(
+	[eventId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
